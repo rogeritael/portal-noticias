@@ -13,11 +13,11 @@ app.use( bodyParser.urlencoded({
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/public', express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/pages'));
 
 app.get('/', (req, res)=>{
     if(req.query.busca == null){
-        res.send('home');
+        res.render('home', {});
     }else{
         res.send(req.query.busca);
     }

@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    padding:  8px 0;
+    background-color: #0aacdc;
+}
+
+.center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+}
+
+
+.logo{
+    width: 50%;
+}
+
+.logo h2{
+    color: #fff;
+}
+
+.form-busca{
+    width: 50%;
+    text-align: right;
+}
+
+.form-busca form {
+    display: inline-block;
+    max-width: 200px;
+    position: relative;
+}
+
+.form-busca i {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.form-busca input {
+    background-color: #008bb4;
+    padding-left: 40px;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+::-ms-input-placeholder{
+    color: #fff;
+}
+
+:-ms-input-placeholder{
+    color: #fff;
+}
+
+section.noticia-destaque{
+    padding: 40px 0;
+}
+
+section.noticia-destaque > .center{
+    max-width: 860px;
+}
+
+.img-destaque {
+    width: 100%;
+    position: relative;
+}
+
+.img-destaque img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.title-destaque-descricao{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px 20px;
+    max-width: 600px;
+    color: #fff;
+}
+
+.overlay-destaque{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.2%;
+    background-color: rgba(0,0,0, .6);
+    /* opacity: .6; */
+    border-radius: 20px;
+}
