@@ -6,7 +6,6 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
 }
 
 header{
@@ -26,6 +25,11 @@ header{
 
 .logo{
     width: 50%;
+    text-align: left;
+}
+
+.logo a{
+    color: #fff;
 }
 
 .logo h2{
@@ -142,7 +146,7 @@ section.outras-noticias h2 {
     width: 48%;
     margin-right: 2%;
     background-color: #fff;
-    height: 100%;
+    height: max-content;
     padding-bottom: 20px;
     text-align: left;
     border-radius: 10px;
@@ -241,12 +245,69 @@ section.outras-noticias h2 {
     display: inline-block;
 }
 
+footer{
+    background-color: #0aacdc;
+    text-align: center;
+    color: #fff;
+    padding: 8px 0;
+}
+
+section.noticia{
+    padding: 20px 0;
+    background-color: #eaeaea;
+}
+
+section.noticia .noticia-single {
+    background-color: #fff;
+    width: 63%;
+    margin-right: 2%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.noticia-single h2{
+    color: #303336;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.noticia-single p{
+    color: #7B8591;
+    font-size: 15px;
+    line-height: 26px;
+    margin-top: 15px;
+}
+
+.noticia-single h3{
+    color: #7B8591;
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+}
+
+.noticia-single span{
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #858585;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px){
+    section.noticia .noticia-single{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 50px;
+    }
     .logo, .form-busca{width: 100% !important;}
     .form-busca{
         text-align: center;
         margin-top: 15px;
     }
+    .logo{
+        text-align: center;
+    }
+
+    
 
     .title-destaque-descricao h2{
         font-size: 36px;
@@ -254,6 +315,10 @@ section.outras-noticias h2 {
 
     .title-destaque-descricao p{
         font-size: 14px;
+    }
+
+    .box-ultima-single{
+        margin: 10px 0;
     }
 
     .box-ultima-single, .mais-lidas, .ultimas{
