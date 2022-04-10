@@ -5,8 +5,9 @@
             <div class="img-destaque">
                 <div class="overlay-destaque"></div>
                 <div class="title-destaque-descricao">
-                    <h2>Quer fugir das praias no verão?</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eligendi numquam saepe laudantium! Accusantium voluptatem obcaecati quaerat autem qui nobis voluptate quas perferendis nisi. Harum nulla repellat placeat consectetur est?</p>
+                    <a style="color: #fff;" href="<%= posts[0].slug %>"><h2><%= posts[0].titulo %></h2></a>
+                    
+                    <p><%- posts[0].descricaoCurta %>...</p>
                 </div>
                 <img src="/public/images/landscape.jpg" alt="">
             </div>
@@ -18,25 +19,18 @@
             <h2>Ultimas Notícias</h2>
             <div class="center">
                 <div class="ultimas">
-                    <div class="box-ultima-single">
-                        <img src="../public/images/noticia-img-01.jpg">
-                        <div class="conteudo-noticia">
-                            <h3>Esportes</h3>
-                            <h2>Como encarar o surf em Floripa</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure quo numquam veritatis dignissimos excepturi. Dolores harum ab possimus quod at animi, amet temporibus odit.</p>
-                            <a href="/saiba-mais">Saiba mais</a>
-                        </div>
-                    </div>
 
+                    <% for(let i = 1; i < posts.length; i++){ %>
                     <div class="box-ultima-single">
-                        <img src="../public/images/noticia-img-01.jpg">
+                        <img src="<%= posts[i].imagem %>">
                         <div class="conteudo-noticia">
-                            <h3>Esportes</h3>
-                            <h2>Como encarar o surf em Floripa</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure quo numquam veritatis dignissimos excepturi. Dolores harum ab possimus quod at animi, amet temporibus odit.</p>
-                            <a href="/saiba-mais">Saiba mais</a>
+                            <h3><%= posts[i].categoria %></h3>
+                            <h2><%= posts[i].titulo %></h2>
+                            <p><%- posts[i].descricaoCurta %>...</p>
+                            <a href="/<%= posts[i].slug %>">Saiba mais</a>
                         </div>
                     </div>
+                    <% } %>
                 </div>
 
                 
@@ -44,38 +38,17 @@
                     <br>
                     <h3>Mais Lidas</h3>
                     <div class="mais-lidas-noticias">
+
+                        <% for(let i = 0; i < posts.length; i++){ %>
                         <div class="mais-lida-single">
                             <img src="../public/images/noticia-img-02.jpg">
                             <div class="texto-mais-lida-single">
-                                <h4>Natureza</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non quidem dolores fugit dolorum et iusto adipisci qui.</p>
-                                <a href="">Saiba mais</a>
+                                <h4><%= posts[i].titulo %></h4>
+                                <p><%- posts[i].descricaoCurta %></p>
+                                <a href="<%= posts[i].slug %>">Saiba mais</a>
                             </div>
                         </div>
-                        <div class="mais-lida-single">
-                            <img src="../public/images/noticia-img-02.jpg">
-                            <div class="texto-mais-lida-single">
-                                <h4>Natureza</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non quidem dolores fugit dolorum et iusto adipisci qui.</p>
-                                <a href="">Saiba mais</a>
-                            </div>
-                        </div>
-                        <div class="mais-lida-single">
-                            <img src="../public/images/noticia-img-02.jpg">
-                            <div class="texto-mais-lida-single">
-                                <h4>Natureza</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non quidem dolores fugit dolorum et iusto adipisci qui.</p>
-                                <a href="">Saiba mais</a>
-                            </div>
-                        </div>
-                        <div class="mais-lida-single">
-                            <img src="../public/images/noticia-img-02.jpg">
-                            <div class="texto-mais-lida-single">
-                                <h4>Natureza</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non quidem dolores fugit dolorum et iusto adipisci qui.</p>
-                                <a href="">Saiba mais</a>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
