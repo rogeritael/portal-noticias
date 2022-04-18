@@ -49,7 +49,11 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/:slug', (req, res)=>{
-    res.render('single', {})    
+    Posts.findOneAndUpdate({slug: req.params.slug}, {$inc: {views: 1}}, {new: true}, function(err, resposta){
+        console.log(resposta);
+
+        res.render('single', {noticia: resposta}) 
+    }) 
 })
 
 
